@@ -14,11 +14,11 @@ function App(props) {
     
       <div className="app-wrapper">
         <Header logo={logo} />
-        <Nav />
+        <Nav friendsList={props.state.friendsPage.friends}/>
         <div className='app-wrapper-content'>
           <Routes>
-            <Route path='/dialogs/*' element={<Dialogs dialogsData={props.dialogsData} messagesData={props.messagesData}/>} />
-            <Route path='/profile/*' element={<Profile postsData={props.postsData}/>} />
+            <Route path='/dialogs/*' element={<Dialogs dialogsData={props.state.profilePage.dialogs} messagesData={props.state.messagesPage.messages}/>} />
+            <Route path='/profile/*' element={<Profile postsData={props.state.profilePage.posts}/>} />
             <Route path='/news/*' element={<News/>} />
             <Route path='/music/*' element={<Music/>} />
             <Route path='/settings/*' element={<Settings/>} />
