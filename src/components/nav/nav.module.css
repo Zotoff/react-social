@@ -1,0 +1,18 @@
+.nav {
+    background-color: burlywood;
+    list-style: none;
+}
+.nav ul {
+    padding-left: 5px;
+}
+.item {
+    list-style: none;
+    margin-bottom: 10px;
+}
+.link {
+    color: white;
+    text-decoration: none;
+}
+.linkActive {
+    color: gold;
+}

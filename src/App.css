@@ -36,3 +36,40 @@
     transform: rotate(360deg);
   }
 }
+
+.app-wrapper {
+  display: grid;
+  grid-template-areas:
+    "h h"
+    "n c";
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: 2fr 10fr;
+}
+.header {
+  grid-area: h;
+  background-color: green;
+}
+.header a {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav {
+  grid-area: n;
+  background-color: green;
+}
+.nav ul {
+  list-style-type: none;
+}
+.nav ul li a {
+  text-decoration: none;
+  color: #000000;
+  cursor: pointer;
+}
+.content {
+  grid-area: c;
+  background-color: magenta;
+  padding: 10px;
+}
