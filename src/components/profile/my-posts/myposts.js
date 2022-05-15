@@ -8,15 +8,19 @@ const MyPosts = (props) => {
     let newPostElement = React.createRef();
 
     let validatePostText = function () {
-        let newPostText = newPostElement.current.value;
-        props.addPost(newPostText, props.state);
+        props.addPost();
+    }
+
+    let onPostChange = () => {
+        let changedText = newPostElement.current.value;
+        props.updatePost(changedText);
     }
 
     return <div>
         <h2>My Posts</h2>
         <hr />
         <div>
-            <textarea ref={newPostElement}></textarea>
+            <textarea ref={newPostElement} onChange={onPostChange} value={props.newPostText} />
             <button onClick={validatePostText}>Add Post</button>
         </div>
         <div className="posts">
