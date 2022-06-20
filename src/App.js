@@ -13,7 +13,7 @@ function App(props) {
   return (
       <div className="app-wrapper">
         <Header logo={logo} />
-        <Nav friendsList={props.state.friendsPage.friends}/>
+        <Nav friendsList={props.state.friendsPage}/>
         <div className='app-wrapper-content'>
           <Routes>
             <Route 
