@@ -23,15 +23,13 @@ function App(props) {
                   dispatch={props.dispatch}
                   store={props.store}
                   />
-                  } 
+              } 
             />
             <Route 
               path='/profile/*' 
               element={
                 <Profile 
-                  dispatch={props.dispatch}
-                  postsData={props.state.profilePage.posts}
-                  profilePage={props.state.profilePage}
+                  store={props.store}
                   />} 
             />
             <Route path='/news/*' element={<News/>} />

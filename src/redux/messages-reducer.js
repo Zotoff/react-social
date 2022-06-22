@@ -14,8 +14,6 @@ let initialState = {
 }
 
 const messagesReducer = (state=initialState, action) => {
-    console.log(action);
-    console.log(state);
     switch(action.type) {
         case UPDATE_NEW_MESSAGE_BODY:
             state.newMessageBody = action.body;
