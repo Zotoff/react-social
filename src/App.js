@@ -3,7 +3,7 @@ import './App.css';
 import Header from './components/header/header';
 import Nav from './components/nav/nav';
 import Profile from './components/profile/profile';
-import Dialogs from './components/dialogs/dialogs';
+import DialogsContainer from './components/dialogs/dialogs-container';
 import News from './components/news/news';
 import Music from './components/music/music';
 import Settings from './components/settings/settings';
@@ -19,8 +19,7 @@ function App(props) {
             <Route 
               path='/dialogs/*' 
               element={
-                <Dialogs 
-                  dispatch={props.dispatch}
+                <DialogsContainer
                   store={props.store}
                   />
               } 
