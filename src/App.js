@@ -9,27 +9,23 @@ import Music from './components/music/music';
 import Settings from './components/settings/settings';
 import { Route, Routes } from 'react-router-dom';
 
-function App(props) {
+function App() {
   return (
       <div className="app-wrapper">
         <Header logo={logo} />
-        <Nav friendsList={props.state.friendsPage}/>
+        <Nav />
         <div className='app-wrapper-content'>
           <Routes>
             <Route 
               path='/dialogs/*' 
               element={
-                <DialogsContainer
-                  store={props.store}
-                  />
+                <DialogsContainer />
               } 
             />
             <Route 
               path='/profile/*' 
               element={
-                <Profile 
-                  store={props.store}
-                  />} 
+                <Profile />} 
             />
             <Route path='/news/*' element={<News/>} />
             <Route path='/music/*' element={<Music/>} />

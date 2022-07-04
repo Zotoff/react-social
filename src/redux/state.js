@@ -48,7 +48,6 @@ let store = {
         profileReducer(this._state.profilePage, action);
         messagesReducer(this._state.messagesPage, action);
         friendsReducer(this._state, action);
-
         this._callSubscriber(this._state);
     }
 }
