@@ -27,6 +27,9 @@ let store = {
             ],
             newMessageBody: ""
         },
+        usersPage: {
+            currentPage: 1
+        },
         friendsPage: {
             friends: [
                 {id: 1, name: 'Pavel', avatar: ''},
