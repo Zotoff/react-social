@@ -2,13 +2,13 @@ import logo from './logo.svg';
 import './App.css';
 import Header from './components/header/header';
 import Nav from './components/nav/nav';
-import Profile from './components/profile/profile';
 import DialogsContainer from './components/dialogs/dialogs-container';
 import UsersContainer from './components/users/users-container';
 import News from './components/news/news';
 import Music from './components/music/music';
 import Settings from './components/settings/settings';
 import { Route, Routes } from 'react-router-dom';
+import ProfileContainer from './components/profile/ProfileContainer';
 
 function App() {
   return (
@@ -24,9 +24,9 @@ function App() {
               } 
             />
             <Route 
-              path='/profile/*' 
+              path='/profile/:userId?'
               element={
-                <Profile />} 
+                <ProfileContainer />} 
             />
             <Route path='/users/*' element={<UsersContainer/>} />
             <Route path='/news/*' element={<News/>} />
